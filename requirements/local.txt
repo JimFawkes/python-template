@@ -1,0 +1,3 @@
+# Requirements for the local env
+# Inherit from test and base
+-r test.txt

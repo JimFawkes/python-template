@@ -1,0 +1,2 @@
+# Requirements to run tests (Local or CI)
+-r base.txt	
