@@ -1,4 +1,4 @@
-name: Test Phoenix-Fire
+name: Test python-template
 
 on: [push]
 
