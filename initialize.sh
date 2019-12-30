@@ -10,8 +10,7 @@ update_project_name () {
 	# Search entire project for the template_project_name and replace with
 	# actual project name
 	echo "Update Project name in files for $PROJECT_NAME"
-	rg python-project-template --hidden --files-with-matches  | xargs sed -i '' "s/python-project-template/$PROJECT_NAME/g"
-
+	rg python-template -g '!.git/*' --hidden --files-with-matches  | xargs sed -i.bak '' "s/python-template/$PROJECT_NAME/g"
 }
 
 create_project_structure () {
@@ -23,7 +22,6 @@ create_project_structure () {
 	echo "Create Project Structure for $PROJECT_NAME"
 	mkdir data logs tests $PROJECT_NAME
 	touch tests/__init__.py $PROJECT_NAME/__init__.py
-
 }
 
 # TODO: Checkin changes to VCS
