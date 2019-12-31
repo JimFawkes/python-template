@@ -115,3 +115,4 @@ venv.bak/
 # My stuff
 data/
 logs/
+*.bak
