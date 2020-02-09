@@ -20,8 +20,8 @@ create_project_structure () {
 	# - tests (+init)
 	# - project_name (+init)
 	echo "Create Project Structure for $PROJECT_NAME"
-	mkdir data logs tests $PROJECT_NAME
-	touch tests/__init__.py $PROJECT_NAME/__init__.py
+	mkdir data logs tests poc $PROJECT_NAME
+	touch tests/__init__.py $PROJECT_NAME/__init__.py poc/__init__.py
 }
 
 # TODO: Checkin changes to VCS

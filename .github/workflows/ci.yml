@@ -1,4 +1,4 @@
-name: Test python-template
+name: run_tests
 
 on: [push]
 
