@@ -1,11 +1,10 @@
-
 # NOTE: you have to use single-quoted strings in TOML for regular expressions.
 # It's the equivalent of r-strings in Python.  Multiline strings are treated as
 # verbose regular expressions by Black.  Use [ ] to denote a significant space
 # character.
 
 [tool.black]
-line-length = 120
+line-length = 100
 target-version = ["py38"]
 include = '\.pyi?$'
 exclude = '''
@@ -23,3 +22,32 @@ exclude = '''
 )/
 '''
 
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module="<PROJECTNAME>"
+author="Moritz Eilfort"
+author-email="<PROJECTNAME>@jimfawkes.com"
+home-page="https://github.com/JimFawkes/<PROJECTNAME>"
+requires=[
+    "<REQUIREMENTS>"
+]
+requires-python=">=3.8"
+description-file="README.md"
+classifiers=[
+    "Intended Audience :: Developers",
+    'Natural Language :: English',
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python :: 3.8",
+    "Topic :: SoftwareDevelopment :: Libraries :: Python Modules",
+]
+
+[tool.flit.metadata.requires-extra]
+test=[
+	"<REQUIREMENTS>"
+]
+
+[tool.flit.entrypoints.console_scripts]
+<PROJECTNAME>="<PROJECTNAME>.cli:cli" 

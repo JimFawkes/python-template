@@ -10,7 +10,7 @@ update_project_name () {
 	# Search entire project for the template_project_name and replace with
 	# actual project name
 	echo "Update Project name in files for $PROJECT_NAME"
-	rg python-template -g '!.git/*' -g '!initialize.sh' --hidden --files-with-matches  | xargs sed -i.bak "s/python-template/$PROJECT_NAME/g"
+	rg python-template -g '!.git/*' -g '!initialize.sh' --hidden --files-with-matches  | xargs sed -i.bak "s/<PROJECT_NAME>/$PROJECT_NAME/g"
 }
 
 create_project_structure () {
