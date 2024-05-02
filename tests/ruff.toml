@@ -1,0 +1,7 @@
+# Extend the `ruff.toml` file in the parent directory...
+extend = "../ruff.toml"
+
+[lint]
+ignore = [
+  "S101" # Allow asserts in tests
+]
